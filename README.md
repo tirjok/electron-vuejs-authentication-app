@@ -3,6 +3,6 @@ What We'll Build: A Vue.js Authentication App
 
 Clone this repo
 
-  npm install
-  gulp
-  npm start
+   ## npm install
+   ## gulp
+   ## npm start
