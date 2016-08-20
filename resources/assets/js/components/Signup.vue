@@ -1,7 +1,7 @@
 <template>
     <div class="col-sm-4 col-sm-offset-4">
       <h2>Signup</h2>
-      <p>signup for an account.</p>
+      <p>Signup for an account.</p>
       <div class="alert alert-danger" v-if="error">
         <p>{{ error }}</p>
       </div>
