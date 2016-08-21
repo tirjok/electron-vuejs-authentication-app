@@ -14,6 +14,6 @@ require('laravel-elixir-vue');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss')
+    mix.styles(['photon.css'])
        .webpack(['index.js', 'auth/index.js']);
 });

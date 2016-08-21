@@ -1,11 +1,12 @@
 <template>
-    <div class="col-sm-4 col-sm-offset-4">
+    <div class="padded-more">
       <h2>Signup</h2>
       <p>Signup for an account.</p>
       <div class="alert alert-danger" v-if="error">
         <p>{{ error }}</p>
       </div>
 
+        <form>
       <div class="form-group">
               <input
                 type="text"
@@ -31,7 +32,19 @@
           v-model="credentials.password"
         >
       </div>
+
+      <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter your mobile"
+                v-model="credentials.mobile"
+              >
+            </div>
+      <div class="form-actions">
       <button class="btn btn-primary" @click="submit()">Signup Free</button>
+      </div>
+      </form>
     </div>
   </template>
 
@@ -46,7 +59,9 @@
           // properties that will be used in it
           credentials: {
             username: '',
-            password: ''
+            password: '',
+            name: '',
+            mobile: ''
           },
           error: ''
         }
@@ -56,12 +71,13 @@
           var credentials = {
             name: this.credentials.name,
             email: this.credentials.email,
-            password: this.credentials.password
+            password: this.credentials.password,
+            mobile: this.credentials.mobile
           }
 
           // We need to pass the component's this context
           // to properly make use of http in the auth service
-          Auth.signup(this, credentials, 'login')
+          Auth.signup(this, credentials, 'secretquote')
         }
       },
       route: {

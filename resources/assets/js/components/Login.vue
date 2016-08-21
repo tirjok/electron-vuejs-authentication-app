@@ -1,10 +1,12 @@
 <template>
-    <div class="col-sm-4 col-sm-offset-4">
+    <div class="padded-more">
       <h2>Log In</h2>
       <p>Log in to your account to get some great quotes.</p>
       <div class="alert alert-danger" v-if="error">
         <p>{{ error }}</p>
       </div>
+
+      <form>
       <div class="form-group">
         <input
           type="text"
@@ -21,7 +23,11 @@
           v-model="credentials.password"
         >
       </div>
-      <button class="btn btn-primary" @click="submit()">Access</button>
+
+      <div class="form-actions">
+      <button class="btn btn-form btn-primary" @click="submit()">Access</button>
+      </div>
+      </form>
     </div>
   </template>
 

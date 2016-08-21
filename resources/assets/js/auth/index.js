@@ -29,7 +29,7 @@ export default {
 
     signup(context, creds, redirect) {
         context.$http.post(SIGNUP_URL, creds).then((data) => {
-            localStorage.setItem('id_token', data.access_token)
+            localStorage.setItem('id_token', data.access_token);
 
             this.checkAuth();
 

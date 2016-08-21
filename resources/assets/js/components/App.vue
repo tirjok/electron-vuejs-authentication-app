@@ -1,17 +1,20 @@
 <template>
-  <div>
+<div>
+    <div class="window-content">
+        <div class="pane-group">
+            <sidebar></sidebar>
 
-    <navbar></navbar>
-
-    <div class="container">
-      <router-view></router-view>
+            <div class="pane">
+              <router-view></router-view>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
   </template>
  
  <script>
   import {Auth} from '../index'
-  import Navbar from './shared/Navbar.vue';
+  import Sidebar from './shared/Sidebar.vue';
 
   export default {
     data() {
@@ -26,7 +29,7 @@
     },
 
     components: {
-        Navbar
+        Sidebar
     }
   }
   </script>
